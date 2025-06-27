@@ -1,0 +1,7 @@
+{
+  "name": "@pathmaker/ui",
+  "main": "src/index.ts",
+  "dependencies": {
+    "react": "^18.0.0"},
+  "packageManager": "yarn@4.5.2"
+}
