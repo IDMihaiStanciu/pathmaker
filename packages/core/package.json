@@ -1,5 +1,39 @@
 {
   "name": "@pathmaker/core",
-  "main": "src/index.ts",
+  "version": "0.1.0",
+  "description": "Core logic and state management for Pathmaker visual node editor",
+  "author": "mihai.stanciu.id@gmail.com",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit",
+    "lint": "biome check src",
+    "lint:fix": "biome check --write src",
+    "format": "biome format --write src"
+  },
+  "dependencies": {
+    "zustand": "^5.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "typescript": "~5.8.3"
+  },
   "packageManager": "yarn@4.5.2"
 }

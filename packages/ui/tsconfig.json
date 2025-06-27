@@ -1,0 +1,23 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "noEmit": false,
+    "baseUrl": ".",
+    "paths": {
+      "@pathmaker/core": ["../core/dist"]
+    },
+    "typeRoots": ["../../node_modules/@types", "./node_modules/@types"]
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "dist"
+  ]
+} 

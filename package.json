@@ -1,10 +1,45 @@
 {
   "name": "pathmaker",
+  "version": "0.1.0",
+  "description": "Visual node editor library",
   "private": true,
+  "author": "Mihai Stanciu <mihai.stanciu.id@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IDMihaiStanciu/pathmaker.git"
+  },
+  "keywords": [
+    "react",
+    "node-editor",
+    "workflow",
+    "visual-programming",
+    "typescript",
+    "monorepo"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "yarn": ">=4.0.0"
+  },
+  "scripts": {
+    "build": "yarn workspaces foreach -A run build",
+    "dev": "yarn workspace example dev",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "check": "biome check .",
+    "type-check": "yarn workspaces foreach -A run type-check",
+    "clean": "yarn workspaces foreach -A run clean"
+  },
   "workspaces": [
     "packages/*",
     "example",
     "backend"
   ],
-  "packageManager": "yarn@4.5.2"
+  "packageManager": "yarn@4.5.2",
+  "devDependencies": {
+    "@biomejs/biome": "^2.0.6",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
 }
